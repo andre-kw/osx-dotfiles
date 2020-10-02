@@ -1,4 +1,3 @@
-
 ## dope colors
 ## colour061
 
@@ -28,10 +27,10 @@ bind | split-window -h
 bind - split-window -v
 
 ## movement
-bind -n C-Left select-pane -L
-bind -n C-Right select-pane -R
-bind -n C-Up select-pane -U
-bind -n C-Down select-pane -D
+bind -n C-S-Left select-pane -L
+bind -n C-S-Right select-pane -R
+bind -n C-S-Up select-pane -U
+bind -n C-S-Down select-pane -D
 
 ## windows
 unbind C-r
@@ -50,14 +49,14 @@ bind -n M-3 select-window -t :3
 
 ## status
 set-option -g status-justify left
-set-option -g status-bg colour155
+set-option -g status-bg colour154
 set-option -g status-interval 5
 set-option -g status-style bg=black
 
 set-option -g status-left ''
 
 set-option -g status-left-length 60
-set-option -g status-right ' i am become death #[fg=#555555]#S #[fg=#db434d]▓#[fg=#ef905d]▓#[fg=#d1cf5e]▓#[fg=#2a824c]▓#[fg=#167596]▓'
+set-option -g status-right ' the world is yours #[fg=#555555]#S #[fg=#db434d]▓#[fg=#ef905d]▓#[fg=#d1cf5e]▓#[fg=#2a824c]▓#[fg=#167596]▓'
 
 setw -g window-status-fg blue
 setw -g window-status-format "#I|#W"
