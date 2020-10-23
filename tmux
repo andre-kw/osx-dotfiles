@@ -34,7 +34,6 @@ bind -n C-S-Down select-pane -D
 
 ## windows
 unbind C-r
-#bind n new-window
 bind q kill-window
 bind n new-window
 bind C-s choose-session
@@ -81,13 +80,14 @@ set -g key-table "root"
 set -g lock-after-time 0
 set -g lock-command "lock -np"
 set -g message-command-style fg=yellow,bg=black
-set -g message-style fg=black,bg=yellow
+set -g message-style fg=black,bg=blue
 set -g mouse on
 set -g prefix2 None
 set -g renumber-windows on
 set -g repeat-time 500
-set -g set-titles off
-set -g set-titles-string "#S:#I:#W - \"#T\" #{session_alerts}"
+set -g set-titles on
+set -g set-titles-string "#W"
+#set -g set-titles-string "#S:#I:#W - \"#T\" #{session_alerts}"
 #set-option -ga terminal-overrides ",st-256color:Tc"
 set -g visual-activity off
 set -g visual-bell off
@@ -96,7 +96,4 @@ set -g word-separators " -_@"
 
 bind C-y set-window-option synchronize-panes
 
-#source-file ~/.tmux-themepack/powerline/block/blue.tmuxtheme
-
 # vim: set ft=tmux:
-
