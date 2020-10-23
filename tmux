@@ -14,11 +14,11 @@ new-session main
 
 ## command prefix
 unbind C-b
-bind ` send-prefix
-set -g prefix `
+bind @ send-prefix
+set -g prefix @
 
 ## reload conf
-bind r source-file ~/etc/tmux \; display-message "Config reloaded."
+bind r source-file ~/Stuff/etc/tmux \; display-message "Config reloaded."
 
 ## paning
 unbind '"'
@@ -38,8 +38,8 @@ unbind C-r
 bind q kill-window
 bind n new-window
 bind C-s choose-session
-bind -n M-h previous-window
-bind -n M-l next-window
+bind -n C-h previous-window
+bind -n C-l next-window
 bind -n M-j swap-window -t -1
 bind -n M-k swap-window -t +1
 bind -n M-` select-window -t :0
@@ -56,11 +56,13 @@ set-option -g status-style bg=black
 set-option -g status-left ''
 
 set-option -g status-left-length 60
-set-option -g status-right ' the world is yours #[fg=#555555]#S #[fg=#db434d]▓#[fg=#ef905d]▓#[fg=#d1cf5e]▓#[fg=#2a824c]▓#[fg=#167596]▓'
+set-option -g status-right ' the world is yours #[fg=#999999]#S #[fg=#db434d]▓#[fg=#ef905d]▓#[fg=#d1cf5e]▓#[fg=#2a824c]▓#[fg=#167596]▓'
 
-setw -g window-status-fg blue
-setw -g window-status-format "#I|#W"
-setw -g window-status-current-format "#I|#W"
+setw -g window-status-format " #[fg=#999999]#I#[fg=#3e3e3e] #W "
+setw -g window-status-current-format " #I #W "
+set -g window-status-style bg=black
+set -g window-status-last-style bg=black
+set -g window-status-current-style bg=white,fg=blue
 set-option -g visual-activity on
 set-window-option -g monitor-activity on
 
