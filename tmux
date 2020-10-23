@@ -18,7 +18,8 @@ bind @ send-prefix
 set -g prefix @
 
 ## reload conf
-bind r source-file ~/Stuff/etc/tmux \; display-message "Config reloaded."
+unbind c
+bind c source-file ~/Stuff/etc/tmux \; display-message "Config reloaded."
 
 ## paning
 unbind '"'
@@ -37,6 +38,7 @@ unbind C-r
 bind q kill-window
 bind n new-window
 bind C-s choose-session
+bind r command-prompt -I "#{b:pane_current_command}" "rename-window '%%'"
 bind -n C-h previous-window
 bind -n C-l next-window
 bind -n M-j swap-window -t -1
