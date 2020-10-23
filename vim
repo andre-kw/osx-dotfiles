@@ -18,8 +18,9 @@ filetype plugin indent on
 syntax on
 
 let g:airline_powerline_fonts=1
-let g:airline_theme="dark"
+let g:airline_theme="light"
 
+set background=light
 set number
 set laststatus=2
 set mouse=a
@@ -29,4 +30,4 @@ set expandtab
 set shiftwidth=2
 set softtabstop=0
 set smarttab
-
+set t_Co=256
