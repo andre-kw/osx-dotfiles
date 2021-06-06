@@ -8,6 +8,7 @@ export ZSH="/Users/awillie/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+# goodbye, agnoster
 ZSH_THEME="agnoster"
 
 # Set list of themes to pick from when loading at random
@@ -112,6 +113,7 @@ alias mysql_start="sudo launchctl load -F /Library/LaunchDaemons/com.oracle.oss.
 alias mysql_stop="sudo launchctl unload -F /Library/LaunchDaemons/com.oracle.oss.mysql.mysqld.plist"
 alias pip="pip3"
 alias murderjamf="sh ~/Stuff/bin/murder-jamf.sh"
+alias example="sh ~/Stuff/bin/example.sh"
 
 if [ -z "$TMUX" ]; then
   tmux a -tmain || tmux new-session -s main

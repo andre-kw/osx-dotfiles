@@ -14,8 +14,8 @@ new-session main
 
 ## command prefix
 unbind C-b
-bind @ send-prefix
-set -g prefix @
+set-option -g prefix %
+bind % send-prefix
 
 ## reload conf
 unbind c
@@ -28,10 +28,10 @@ bind | split-window -h
 bind - split-window -v
 
 ## movement
-bind -n C-S-Left select-pane -L
-bind -n C-S-Right select-pane -R
-bind -n C-S-Up select-pane -U
-bind -n C-S-Down select-pane -D
+#bind M-s-Left select-pane -L
+#bind M-s-Right select-pane -R
+#bind M-s-Up select-pane -U
+#bind M-s-Down select-pane -D
 
 ## windows
 unbind C-r

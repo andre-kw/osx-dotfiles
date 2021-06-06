@@ -12,18 +12,22 @@ call vundle#begin()
   Plugin 'tpope/vim-surround'
   Plugin 'raimondi/delimitmate'
   Plugin 'pangloss/vim-javascript'
+  " Plugin 'isruslan/vim-es6'
   Plugin 'othree/html5.vim'
   Plugin 'alvan/vim-closetag'
+  Plugin 'mxw/vim-jsx'
+  Plugin 'c.vim'
+  Plugin 'octol/vim-cpp-enhanced-highlight'
 
 call vundle#end()
 filetype plugin indent on
 syntax on
 
 let g:airline_powerline_fonts=1
-let g:airline_theme="aurora"
+let g:airline_theme="onedark"
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store'
 
-set background=light
+set background=dark
 set number
 set laststatus=2
 set mouse=a
